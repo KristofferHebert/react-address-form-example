@@ -3,8 +3,9 @@ body {
 }
 
 .App {
-  max-width: 50rem;
+  max-width: 20rem;
   margin: auto;
+  padding-top: 2rem;
 }
 
 .input {
@@ -16,8 +17,16 @@ body {
   border-radius: .4rem;
 }
 
-.input__has-errors {
-  border-color:red
+.input__has-errors, 
+.input__has-errors:focus, 
+.input__has-errors:active {
+  outline: none;
+  border: 1px solid red;
+}
+
+.input-container {
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .input-label {
