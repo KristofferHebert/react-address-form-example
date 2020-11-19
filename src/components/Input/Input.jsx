@@ -13,7 +13,7 @@ export const Input = ({ id = '', labelText = '', className = 'input w-full', val
   className = error && error.type ? className += ' input__has-errors' : className
 
   return (
-    <label htmlFor={id}>
+    <label htmlFor={id} className='input-container'>
       <span className='input-label'>{labelText} {isRequired && <InputRequiredStar />}</span>
       <input id={id} type={type} value={value} className={className} onChange={onChange} placeholder={placeholder} disabled={disabled} />
       <InputError error={error} />
