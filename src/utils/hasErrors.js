@@ -5,7 +5,7 @@
 export const hasErrors = (formState) => {
   const fields = Object.keys(formState)
   for (const field of fields) {
-    if (fields[field] && fields[field].errors && fields[field].errors.length !== 0) {
+    if (formState[field].isDirty && formState[field] && formState[field].error) {
       return true
     }
   }
