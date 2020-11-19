@@ -11,12 +11,17 @@ const validateRequired = (value) => {
 }
 // TBD update use real zip code validation api or library
 const validateZipcode = (value) => {
-  if (typeof parseInt(value) !== 'number' || value.length !== 5) {
-    return {
-      type: 'zipcode',
-      message: 'Zip code can only be numeric and 5 digits'
-    }
+  const error = {
+    type: 'zipcode',
+    message: 'Zip code can only be numeric and 5 digits'
   }
+
+  if (Number.isNaN(parseInt(value))) {
+    return error
+  } else if (value.length !== 5) {
+    return error
+  }
+
   return true
 }
 // TBD update use API or library
@@ -38,7 +43,7 @@ const validateZipcodeWithAddress = (value) => {
   const zipcode = validateZipcode(value)
   if (zipcode.type) return zipcode
 
-  // Replace with API call that validates zipcode against address
+  // Replace with API call that validates zipcode against
   if (value !== '98107') {
     return {
       type: 'address',
