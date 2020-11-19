@@ -8,6 +8,7 @@ const defaultFieldValues = {
 }
 
 export const AddressFormInitialState = {
+  formIsClean: true,
   firstName: {
     ...defaultFieldValues,
     id: 'firstName'
