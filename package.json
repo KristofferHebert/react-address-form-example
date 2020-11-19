@@ -19,9 +19,13 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "standard", 
+      "standard-jsx", 
+      "standard-react"
     ]
   },
   "browserslist": {
@@ -36,6 +40,7 @@
       "last 1 safari version"
     ]
   },
+  
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint-config-standard": "^16.0.2",
