@@ -13,7 +13,11 @@ body {
   border: 1px solid gray;
   box-sizing: border-box;
   display: block;
-  margin-bottom: 1rem;
+  border-radius: .4rem;
+}
+
+.input__has-errors {
+  border-color:red
 }
 
 .input-label {
@@ -23,18 +27,27 @@ body {
 
 .error-message {
   color: white;
-  padding: .4rem;
-  background-color: red;
-  border: 1px solid red;
+  padding: .1rem 0 .4rem;
+  color: #721c24;
+  margin-top: .2rem;
+  margin-bottom: 1rem;
 }
 
 .button {
-  background: blue;
+  background-color: #007bff;
+  border-color: #007bff;
   color: white;
   border: 1px solid transparent;
-  text-transform: uppercase;
   cursor: pointer;
   box-sizing: border-box;
+}
+
+.button:disabled {
+  background: #dddddd;
+}
+
+.required {
+  color: red;
 }
 
 .w-full {
