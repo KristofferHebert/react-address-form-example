@@ -4,7 +4,8 @@ import React, { useState, useContext, createContext } from 'react'
 const defaultFieldValues = {
   value: '',
   isDirty: false,
-  errors: []
+  error: {},
+  isValid: false
 }
 
 export const AddressFormInitialState = {
