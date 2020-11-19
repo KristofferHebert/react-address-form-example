@@ -15,7 +15,7 @@ export const AddressForm = () => {
     const lastName = capitalize(state.lastName.value || '')
     const city = capitalize(state.city.value || '')
     const zipcode = capitalize(state.zipcode.value || '')
-    const email = capitalize(state.email.value || '')
+    const email = state.email.value || ''
 
     alert(`
       ${firstName} ${lastName}
