@@ -1,10 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 # Concepts
-Purpose of this project is to have an Address form in React that applies specific input validation rules and displays individual error comments. I was originally going to write this in TypeScript, but I thought of future developer who don't know TypeScript. I rely on PropTypes for type validation.
+The purpose of this project is to have an Address form in React that applies specific input validation rules and displays individual error comments. I was originally going to write this in TypeScript, but I thought of future developers who don't know TypeScript. I rely on PropTypes for type validation.
 
-For state management, I used useContext hook to to make it easy to get the values from the Address Form without prop drilling. A larger more mature application should use useReducer or Redux to keep state management simple as the application grows.
+For state management, I used "useContext" hook to make it easy to get the values from the Address Form without prop drilling. A larger more mature application should use useReducer or Redux to keep state management simple as the application grows.
 
-Input validation and onChange handling at the Address form component level. The input components are dummy components that only consume those values. This makes it much easier to extend and test forms. Input validation stored in a separate utility file and is written in way that allows other developers to easily add more validations in the future.
+Input validation and onChange handling at the Address form component level. The input components are dummy components that only consume those values. This makes it much easier to extend and test forms. Input validation is stored in a separate utility file and is written in a way that allows other developers to easily add more validations in the future.
 
 # Future Improvements
 If I had more time...
