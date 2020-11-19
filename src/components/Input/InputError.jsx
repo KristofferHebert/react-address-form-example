@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const InputError = ({ errors = [] }) => {
-  if (errors.length) return null
+  if (errors.length === 0) return null
 
   return (
-    <p>{errors.join('<br />')}</p>
+    <p className='error-message'>{errors.join('<br />')}</p>
   )
 }
 

@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types'
-import React, { useContext, createContext } from 'react'
+import React, { useState, useContext, createContext } from 'react'
 
 const defaultFieldValues = {
   value: '',
@@ -30,11 +30,11 @@ export const AddressFormInitialState = {
   }
 }
 
-export const AddressFormContext = createContext(AddressFormInitialState)
+export const AddressFormContext = createContext()
 export const useAddressFormContext = () => useContext(AddressFormContext)
 
 export const AddressFormProvider = ({ children }) => {
-  const { state, setState } = useAddressFormContext()
+  const [state, setState] = useState(AddressFormInitialState)
   return (
     <AddressFormContext.Provider value={{ state, setState }}>
       {children}

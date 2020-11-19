@@ -2,13 +2,30 @@ body {
   font-size: 1rem;
 }
 
-.container {
-
+.App {
+  max-width: 50rem;
+  margin: auto;
 }
 
 .input {
-  padding: .3rem .7rem;
+  font-size: 1rem;
+  padding: .4rem;
   border: 1px solid gray;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.input-label {
+  margin-bottom: .3rem;
+  display: block;
+}
+
+.error-message {
+  color: white;
+  padding: .4rem;
+  background-color: red;
+  border: 1px solid red;
 }
 
 .button {
@@ -17,6 +34,7 @@ body {
   border: 1px solid transparent;
   text-transform: uppercase;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .w-full {

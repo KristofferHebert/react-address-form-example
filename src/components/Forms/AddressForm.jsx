@@ -11,12 +11,15 @@ export const AddressForm = () => {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <Input id='firstName' placeholder='John' />
-      <Input id='lastName' placeholder='Hancock' />
-      <Input id='city' placeholder='Seattle' />
-      <Input id='zipcode' placeholder='98101' />
-      <Input id='email' placeholder='john.hancock@johnhancock.com' />
-      <Input id='submit' className='button input w-full' type='submit' value='Submit' />
+      <fieldset>
+        <legend>Customer Details:</legend>
+        <Input {...state.firstName} labelText='First Name' placeholder='John' />
+        <Input {...state.lastName} labelText='Last Name' placeholder='Hancock' />
+        <Input {...state.city} labelText='City' placeholder='Seattle' />
+        <Input {...state.zipcode} labelText='Zipcode' placeholder='98101' />
+        <Input {...state.email} labelText='Email' placeholder='john.hancock@johnhancock.com' />
+        <Input id='submit' className='button input w-full' type='submit' value='Submit' />
+      </fieldset>
     </form>
   )
 }
