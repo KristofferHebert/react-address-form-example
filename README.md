@@ -10,7 +10,7 @@ Input validation and onChange handling at the Address form component level. The 
 If I had more time...
 
 - Prettier script or hook
-- Prepush hook that runs tests before pushing code branches
+- Prepush hook that runs tests before pushing code
 - I would to add more tests to the Address form component to validate all inputs
 - Refactor inputs to handle form types like select, radio
 - Refactor Address form into reusable Form factory Component that uses a form schema
