@@ -1,16 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const InputError = ({ errors = [] }) => {
-  if (errors.length === 0) return null
+export const InputErrorMessage = ({ message }) => (
+  <span>{message}</span>
+)
 
+export const InputError = ({ error }) => {
+  if (!error.type) return null
+
+  // Can support multiple error messages
+  // Not sure if it should or not
   return (
-    <p className='error-message'>{errors.join('<br />')}</p>
+    <div className='error-message'>
+      <InputErrorMessage key={error.type} message={error.message} />
+    </div>
   )
 }
 
+InputErrorMessage.propTypes = {
+  message: PropTypes.string.isRequired
+}
+
 InputError.propTypes = {
-  errors: PropTypes.array.isRequired
+  error: PropTypes.object.isRequired
 }
 
 export default InputError
